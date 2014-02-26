@@ -52,7 +52,7 @@ public class ChooseNumbersActivity extends Activity {
         setContentView(R.layout.activity_choose_numbers);
 
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
-        final View contentView = findViewById(R.id.fullscreen_content);
+        final View contentView = findViewById(R.id.number_picker);
 
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
@@ -111,7 +111,7 @@ public class ChooseNumbersActivity extends Activity {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+
     }
 
     @Override
