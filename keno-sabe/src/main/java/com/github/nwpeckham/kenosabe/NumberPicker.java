@@ -15,28 +15,48 @@ import android.view.SurfaceView;
 public class NumberPicker extends SurfaceView implements SurfaceHolder.Callback
 {
     private NumberPickerThread _thread;
-    private RectF _boxRect = new RectF(0,0,60,60);
-    private Paint _numberPaint = new Paint();
-    /**
+    private RectF[] _rects = new RectF[80];
+
+    private int _screenWidth;
+    //private int _screenHeight;
+
+    // Variables that control the way the boxes will appear
+    private int _boxWidth;
+    private int _boxHeight;
+    private int _boxPadding = 15;
+    private Paint _boxBorderPaint = new Paint();
+    private Paint _boxBackgroundPaint = new Paint();
+
+
+      /**
      * Parameterized constructor for number picker class*
      */
 
     public NumberPicker(Context context, AttributeSet attrSet) {
         super(context, attrSet);
         getHolder().addCallback(this);
-        _numberPaint.setColor(Color.BLACK);
+
+        _boxBorderPaint.setColor(Color.BLACK);
+
+        _screenWidth = context.getResources().getDisplayMetrics().widthPixels;
+        //_screenHeight = context.getResources().getDisplayMetrics().heightPixels;
+        _boxWidth = (_screenWidth - (11*_boxPadding))/10;
+        _boxHeight = _boxWidth;
+
+        for(int i=0;i<80;i++){
+            int col = i % 10;
+            int row = i / 10;
+            int x = _boxPadding * (col + 1) + _boxWidth * col;
+            int y = _boxPadding * (row + 1) + _boxHeight * row;
+            _rects[i] = new RectF(x, y, x+_boxWidth,y+_boxHeight);
+        }
     }
 
     @Override
     public void onDraw(Canvas canvas) {
         canvas.drawColor(Color.DKGRAY);
-        for(int col = 1; col< 11; col++){
-            for(int row = 1; row < 9; row++){
-                float x = col * _boxRect.width() * 1.5f;
-                float y = row * _boxRect.height() * 1.5f;
-                _boxRect.set(x,y,x+60,y+60);
-                canvas.drawRoundRect(_boxRect,5,5,_numberPaint);
-            }
+        for(int x = 0; x< 80; x++){
+            canvas.drawRoundRect(_rects[x],5,5, _boxBorderPaint);
         }
     }
 
