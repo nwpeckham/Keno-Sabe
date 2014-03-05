@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0099cc"
-    tools:context="com.github.nwpeckham.kenosabe.ChooseNumbersActivity">
+    tools:context="com.github.nwpeckham.kenosabe.KenoSabeActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -18,42 +18,33 @@
         android:layout_height="fill_parent"
         android:layout_gravity="center_horizontal|bottom">
 
-        <ViewAnimator
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/viewAnimator"
-            android:animateFirstView="true">
-
-            <com.github.nwpeckham.kenosabe.NumberPickerView
-                android:id="@+id/number_picker"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:keepScreenOn="false"
-                android:gravity="center"
-                android:clickable="true" />
-
-            <com.github.nwpeckham.kenosabe.NumberPickerView
-                android:id="@+id/number_picker2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:keepScreenOn="false"
-                android:gravity="center"
-                android:clickable="true" />
-
-        </ViewAnimator>
+        <com.github.nwpeckham.kenosabe.NumberPickerView
+            android:id="@+id/number_picker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="false"
+            android:gravity="center"
+            android:clickable="true" />
 
         <ViewFlipper
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/viewFlipper2" >
+            android:id="@+id/viewControlFlipper" >
 
-            <QuickContactBadge
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/quickContactBadge" />
+                android:text="Page 1"
+                android:id="@+id/textView"
+                android:textAlignment="center" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Page 2"
+                android:id="@+id/textView2"
+                android:textAlignment="center" />
         </ViewFlipper>
-
     </LinearLayout>
 
 </FrameLayout>
