@@ -8,14 +8,15 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 
 /**
  * Created by Nathan on 2/26/14.
  */
-public class NumberPicker extends SurfaceView implements SurfaceHolder.Callback
+public class NumberPickerView extends SurfaceView implements SurfaceHolder.Callback
 {
     private NumberPickerThread _thread;
-    private RectF[] _rects = new RectF[80];
+    private NumberBox[] _rects = new NumberBox[80];
 
     private int _screenWidth;
     //private int _screenHeight;
@@ -32,11 +33,12 @@ public class NumberPicker extends SurfaceView implements SurfaceHolder.Callback
      * Parameterized constructor for number picker class*
      */
 
-    public NumberPicker(Context context, AttributeSet attrSet) {
+    public NumberPickerView(Context context, AttributeSet attrSet) {
         super(context, attrSet);
         getHolder().addCallback(this);
 
         _boxBorderPaint.setColor(Color.BLACK);
+        _boxBackgroundPaint.setColor(Color.LTGRAY);
 
         _screenWidth = context.getResources().getDisplayMetrics().widthPixels;
         //_screenHeight = context.getResources().getDisplayMetrics().heightPixels;
@@ -48,15 +50,30 @@ public class NumberPicker extends SurfaceView implements SurfaceHolder.Callback
             int row = i / 10;
             int x = _boxPadding * (col + 1) + _boxWidth * col;
             int y = _boxPadding * (row + 1) + _boxHeight * row;
-            _rects[i] = new RectF(x, y, x+_boxWidth,y+_boxHeight);
+            _rects[i] = new NumberBox(x, y, x+_boxWidth,y+_boxHeight);
+            _rects[i].setText((new Integer(i + 1).toString()));
         }
+
+
+    }
+
+    public void onClick(View view){
+
+    }
+
+
+    @Override
+    public void onMeasure(int x, int y){
+        int width = (_boxWidth*10)+(_boxPadding*11);
+        int height = (_boxHeight*8)+(_boxPadding*9);
+        setMeasuredDimension(width,height);
     }
 
     @Override
     public void onDraw(Canvas canvas) {
-        canvas.drawColor(Color.DKGRAY);
-        for(int x = 0; x< 80; x++){
-            canvas.drawRoundRect(_rects[x],5,5, _boxBorderPaint);
+        canvas.drawColor(Color.WHITE);
+        for(int i = 0; i< 80; i++){
+            _rects[i].drawBox(canvas);
         }
     }
 

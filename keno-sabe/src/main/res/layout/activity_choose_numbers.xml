@@ -8,36 +8,52 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
-    <com.github.nwpeckham.kenosabe.NumberPicker android:id="@+id/number_picker"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:keepScreenOn="false"
-        android:gravity="center"
-        android:clickable="true" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
-    <FrameLayout android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
 
-        <LinearLayout android:id="@+id/fullscreen_content_controls"
-            style="?metaButtonBarStyle"
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal|bottom">
+
+        <ViewAnimator
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent">
+            android:id="@+id/viewAnimator"
+            android:animateFirstView="true">
 
-            <Button android:id="@+id/dummy_button"
-                style="?metaButtonBarButtonStyle"
-                android:layout_width="0dp"
+            <com.github.nwpeckham.kenosabe.NumberPickerView
+                android:id="@+id/number_picker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:keepScreenOn="false"
+                android:gravity="center"
+                android:clickable="true" />
+
+            <com.github.nwpeckham.kenosabe.NumberPickerView
+                android:id="@+id/number_picker2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:keepScreenOn="false"
+                android:gravity="center"
+                android:clickable="true" />
+
+        </ViewAnimator>
+
+        <ViewFlipper
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewFlipper2" >
+
+            <QuickContactBadge
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
+                android:id="@+id/quickContactBadge" />
 
-        </LinearLayout>
-    </FrameLayout>
+        </ViewFlipper>
+
+    </LinearLayout>
 
 </FrameLayout>

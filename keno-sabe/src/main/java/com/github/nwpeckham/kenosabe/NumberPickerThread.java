@@ -8,11 +8,11 @@ import android.view.SurfaceHolder;
  */
 public class NumberPickerThread extends Thread {
     private SurfaceHolder _surfaceHolder;
-    private NumberPicker _panel;
+    private NumberPickerView _panel;
     private boolean _run = false;
 
 
-    public NumberPickerThread(SurfaceHolder surfaceHolder, NumberPicker panel) {
+    public NumberPickerThread(SurfaceHolder surfaceHolder, NumberPickerView panel) {
         _surfaceHolder = surfaceHolder;
         _panel = panel;
     }
