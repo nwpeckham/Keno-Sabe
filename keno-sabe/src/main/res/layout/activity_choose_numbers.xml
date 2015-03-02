@@ -37,14 +37,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:padding="5dp"
-                android:columnCount="3"
                 android:rowOrderPreserved="false"
-                android:useDefaultMargins="false">
+                android:useDefaultMargins="false"
+                android:rowCount="2">
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New Button"
+                    android:text="@string/group_button"
                     android:id="@+id/button"
                     android:layout_row="0"
                     android:layout_column="0" />
@@ -52,7 +52,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New Button"
+                    android:text="@string/king_button"
                     android:id="@+id/button2"
                     android:layout_row="0"
                     android:layout_column="1" />
