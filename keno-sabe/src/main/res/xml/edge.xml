@@ -1,0 +1,25 @@
+<payTable name="Edge" id="ed" sampleSize="32" minChosen="20" maxChosen="20" dollarAmount="2">
+    <payGroup draws="20">
+        <payOut successes="0">1000</payOut>
+        <payOut successes="1">500</payOut>
+        <payOut successes="2">100</payOut>
+        <payOut successes="3">17</payOut>
+        <payOut successes="4">5</payOut>
+        <payOut successes="5">2</payOut>
+        <payOut successes="6">0</payOut>
+        <payOut successes="7">0</payOut>
+        <payOut successes="8">0</payOut>
+        <payOut successes="9">0</payOut>
+        <payOut successes="10">0</payOut>
+        <payOut successes="11">2</payOut>
+        <payOut successes="12">5</payOut>
+        <payOut successes="13">17</payOut>
+        <payOut successes="14">100</payOut>
+        <payOut successes="15">500</payOut>
+        <payOut successes="16">5000</payOut>
+        <payOut successes="17">10000</payOut>
+        <payOut successes="18">20000</payOut>
+        <payOut successes="19">32000</payOut>
+        <payOut successes="20">50000</payOut>
+    </payGroup>
+</payTable>

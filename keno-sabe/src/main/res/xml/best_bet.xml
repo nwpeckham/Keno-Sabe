@@ -1,0 +1,31 @@
+<payTable name="Best Bet" id="bbk" minChosen="2" maxChosen="8" dollarAmount="1.35">
+    <payGroup draws="2">
+        <payOut successes="2">17</payOut>
+    </payGroup>
+    <payGroup draws="3">
+        <payOut successes="3">75</payOut>
+    </payGroup>
+    <payGroup draws="4">
+        <payOut successes="3">2</payOut>
+        <payOut successes="4">310</payOut>
+    </payGroup>
+    <payGroup draws="5">
+        <payOut successes="4">5</payOut>
+        <payOut successes="5">1500</payOut>
+    </payGroup>
+    <payGroup draws="6">
+        <payOut successes="4">5</payOut>
+        <payOut successes="5">100</payOut>
+        <payOut successes="6">4500</payOut>
+    </payGroup>
+    <payGroup draws="7">
+        <payOut successes="5">23</payOut>
+        <payOut successes="6">675</payOut>
+        <payOut successes="7">12500</payOut>>
+    </payGroup>
+    <payGroup draws="8">
+        <payOut successes="6">150</payOut>
+        <payOut successes="7">2200</payOut>
+        <payOut successes="8">35000</payOut>
+    </payGroup>
+</payTable>

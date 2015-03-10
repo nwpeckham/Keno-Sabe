@@ -1,0 +1,25 @@
+<payTable name="20-Spot" id="ts" minChosen="20" maxChosen="20" dollarAmount="2">
+    <payGroup draws="20">
+        <payOut successes="0">200</payOut>
+        <payOut successes="1">4</payOut>
+        <payOut successes="2">2</payOut>
+        <payOut successes="3">2</payOut>
+        <payOut successes="4">0</payOut>
+        <payOut successes="5">0</payOut>
+        <payOut successes="6">0</payOut>
+        <payOut successes="7">2</payOut>
+        <payOut successes="8">4</payOut>
+        <payOut successes="9">10</payOut>
+        <payOut successes="10">25</payOut>
+        <payOut successes="11">50</payOut>
+        <payOut successes="12">200</payOut>
+        <payOut successes="13">1000</payOut>
+        <payOut successes="14">10000</payOut>
+        <payOut successes="15">15000</payOut>
+        <payOut successes="16">25000</payOut>
+        <payOut successes="17">30000</payOut>
+        <payOut successes="18">35000</payOut>
+        <payOut successes="19">50000</payOut>
+        <payOut successes="20">50000</payOut>
+    </payGroup>
+</payTable>
