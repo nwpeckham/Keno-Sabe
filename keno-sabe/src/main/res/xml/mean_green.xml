@@ -1,0 +1,49 @@
+<payTable name="Mean Green" id="mg" minChosen="2" maxChosen="10" dollarAmount=".25">
+    <payGroup draws="2">
+        <payOut successes="2">3.25</payOut>
+    </payGroup>
+    <payGroup draws="3">
+        <payOut successes="2">.25</payOut>
+        <payOut successes="3">12</payOut>
+    </payGroup>
+    <payGroup draws="4">
+        <payOut successes="3">.5</payOut>
+        <payOut successes="4">57</payOut>
+    </payGroup>
+    <payGroup draws="5">
+        <payOut successes="3">.25</payOut>
+        <payOut successes="4">2</payOut>
+        <payOut successes="5">230</payOut>
+    </payGroup>
+    <payGroup draws="6">
+        <payOut successes="4">1</payOut>
+        <payOut successes="5">24</payOut>
+        <payOut successes="6">700</payOut>
+    </payGroup>
+    <payGroup draws="7">
+        <payOut successes="4">.25</payOut>
+        <payOut successes="5">4</payOut>
+        <payOut successes="6">115</payOut>
+        <payOut successes="7">2500</payOut>>
+    </payGroup>
+    <payGroup draws="8">
+        <payOut successes="5">1</payOut>
+        <payOut successes="6">20</payOut>
+        <payOut successes="7">550</payOut>
+        <payOut successes="8">8500</payOut>
+    </payGroup>
+    <payGroup draws="9">
+        <payOut successes="6">15</payOut>
+        <payOut successes="7">100</payOut>
+        <payOut successes="8">1250</payOut>
+        <payOut successes="9">10000</payOut>
+    </payGroup>
+    <payGroup draws="10">
+        <payOut successes="5">.25</payOut>
+        <payOut successes="6">5</payOut>
+        <payOut successes="7">35</payOut>
+        <payOut successes="8">250</payOut>
+        <payOut successes="9">2500</payOut>
+        <payOut successes="10">12500</payOut>
+    </payGroup>
+</payTable>

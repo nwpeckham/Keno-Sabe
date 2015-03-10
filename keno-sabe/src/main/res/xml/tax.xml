@@ -1,0 +1,6 @@
+<payTable name="Tax Ticket" id="ttk" minChosen="5" maxChosen="5" dollarAmount="1">
+    <payGroup draws="5">
+        <payOut successes="4">10.40</payOut>
+        <payOut successes="5">1040</payOut>
+    </payGroup>
+</payTable>
