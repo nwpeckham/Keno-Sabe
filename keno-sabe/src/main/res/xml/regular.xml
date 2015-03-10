@@ -1,0 +1,64 @@
+<payTable name="regular" id="r" minChosen="1" maxChosen="11" dollarAmount="1">
+    <payGroup draws="1">
+        <payOut successes="1">3</payOut>
+    </payGroup>
+    <payGroup draws="2">
+        <payOut successes="2">13</payOut>
+    </payGroup>
+    <payGroup draws="3">
+        <payOut successes="2">.5</payOut>
+        <payOut successes="3">50</payOut>
+    </payGroup>
+    <payGroup draws="4">
+        <payOut successes="2">.5</payOut>
+        <payOut successes="3">1.5</payOut>
+        <payOut successes="4">200</payOut>
+    </payGroup>
+    <payGroup draws="5">
+        <payOut successes="3">1</payOut>
+        <payOut successes="4">13</payOut>
+        <payOut successes="5">800</payOut>
+    </payGroup>
+    <payGroup draws="6">
+        <payOut successes="3">1</payOut>
+        <payOut successes="4">4</payOut>
+        <payOut successes="5">75</payOut>
+        <payOut successes="6">2000</payOut>
+    </payGroup>
+    <payGroup draws="7">
+        <payOut successes="4">1</payOut>
+        <payOut successes="5">18</payOut>
+        <payOut successes="6">450</payOut>
+        <payOut successes="7">8000</payOut>>
+    </payGroup>
+    <payGroup draws="8">
+        <payOut successes="4">.5</payOut>
+        <payOut successes="5">4</payOut>
+        <payOut successes="6">80</payOut>
+        <payOut successes="7">1500</payOut>
+        <payOut successes="8">25000</payOut>
+    </payGroup>
+    <payGroup draws="9">
+        <payOut successes="5">4</payOut>
+        <payOut successes="6">50</payOut>
+        <payOut successes="7">300</payOut>
+        <payOut successes="8">4000</payOut>
+        <payOut successes="9">30000</payOut>
+    </payGroup>
+    <payGroup draws="10">
+        <payOut successes="5">1</payOut>
+        <payOut successes="6">20</payOut>
+        <payOut successes="7">140</payOut>
+        <payOut successes="8">1000</payOut>
+        <payOut successes="9">10000</payOut>
+        <payOut successes="10">35000</payOut>
+    </payGroup>
+    <payGroup draws="11">
+        <payOut successes="6">8</payOut>
+        <payOut successes="7">70</payOut>
+        <payOut successes="8">425</payOut>
+        <payOut successes="9">2500</payOut>
+        <payOut successes="10">20000</payOut>
+        <payOut successes="11">40000</payOut>
+    </payGroup>
+</payTable>

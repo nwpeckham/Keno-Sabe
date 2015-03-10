@@ -4,11 +4,12 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import com.github.nwpeckham.kenosabe.odds.PayTable;
 
 /**
  * Created by Nathan on 2/26/14.
@@ -51,9 +52,13 @@ public class NumberPickerView extends SurfaceView implements SurfaceHolder.Callb
             int x = _boxPadding * (col + 1) + _boxWidth * col;
             int y = _boxPadding * (row + 1) + _boxHeight * row;
             _rects[i] = new NumberBox(x, y, x+_boxWidth,y+_boxHeight);
-            _rects[i].setText((new Integer(i + 1).toString()));
+            _rects[i].setText((Integer.valueOf(i + 1).toString()));
         }
 
+        PayTable odds = new PayTable(2);
+        double prob = odds.getOdds(0);
+        Log.e("Odds", String.valueOf(prob));
+        Log.e("Payout", String.valueOf(odds.getExpectedPayout(2,1)));
 
     }
 

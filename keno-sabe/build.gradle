@@ -20,4 +20,6 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:18.0.0'
+    compile files('src/main/java/libs/commons-math3-3.4.1-javadoc.jar')
+    compile files('src/main/java/libs/commons-math3-3.4.1.jar')
 }
